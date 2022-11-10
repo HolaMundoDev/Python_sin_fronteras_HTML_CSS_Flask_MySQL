@@ -116,3 +116,8 @@ print(gatitos)
 perritos = dict(nombre="Chanchito Feliz", edad=6)
 
 print(perritos)
+
+verdadero = True
+falso = False
+
+print(verdadero, falso)
