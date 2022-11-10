@@ -83,7 +83,15 @@ diccionario = {
 # print(diccionario.get("nombre"))
 
 diccionario["nombre"] = "Fluffy"
+# print(len(diccionario))
+
+diccionario["ronronea"] = "Si"
 print(diccionario)
-print(len(diccionario))
+# diccionario.pop("ronronea")
+# diccionario.popitem()
 
-
+copiaGatito = diccionario.copy()
+otraCopiaGatito = dict(diccionario)
+# del diccionario["ronronea"]
+diccionario.clear()
+print(diccionario, copiaGatito, otraCopiaGatito)
