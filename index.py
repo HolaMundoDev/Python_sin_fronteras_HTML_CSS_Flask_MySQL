@@ -27,3 +27,12 @@ inicio = "Hola"
 final = "Mundo"
 
 print(inicio + final)
+
+palabra = 'hola mundo' # string
+oracion = "hola mundo comilla doble" # string 
+
+entero = 20 # integer
+conDecimales = 20.2 # float
+complejo = 1j # numeros complejos se les agrega una j
+
+print(palabra, oracion, entero, conDecimales, complejo)
