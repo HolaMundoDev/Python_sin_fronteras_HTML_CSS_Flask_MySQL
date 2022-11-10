@@ -66,4 +66,7 @@ print(tupla.count("hola"))
 print(tupla.index("mundo"))
 print(tupla[0])
 listaDeTupla = list(tupla)
-print(listaDeTupla)
+# print(listaDeTupla)
+
+rango = range(6)
+print(rango)
