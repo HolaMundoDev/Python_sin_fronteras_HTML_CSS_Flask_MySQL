@@ -8,17 +8,17 @@ if 5 < 3:
 x = 5
 y = "chanchito feliz"
 
-print(x, y)
+# print(x, y)
 
 correo = "chanchito@feliz.com"
 
-print(correo)
+# print(correo)
 
 _mi_var = "canchito"
 MIVAR = "canchito"
 
 a,b,c = "Lala", "Lele", "Lili"
-print(a,b,c)
+# print(a,b,c)
 
 valor1 = valor2 = valor3 = "Chanchito Feliz"
 print(valor1, valor2, valor3)
@@ -26,7 +26,7 @@ print(valor1, valor2, valor3)
 inicio = "Hola"
 final = "Mundo"
 
-print(inicio + final)
+# print(inicio + final)
 
 palabra = 'hola mundo' # string
 oracion = "hola mundo comilla doble" # string 
@@ -35,4 +35,12 @@ entero = 20 # integer
 conDecimales = 20.2 # float
 complejo = 1j # numeros complejos se les agrega una j
 
-print(palabra, oracion, entero, conDecimales, complejo)
+# print(palabra, oracion, entero, conDecimales, complejo)
+
+lista = [1,2,3]
+lista2 = lista.copy()
+lista.append(4)
+# lista.clear()
+
+print(lista)
+print(lista2)
