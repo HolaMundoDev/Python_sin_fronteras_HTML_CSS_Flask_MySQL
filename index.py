@@ -69,4 +69,21 @@ listaDeTupla = list(tupla)
 # print(listaDeTupla)
 
 rango = range(6)
-print(rango)
+# print(rango)
+
+diccionario = {
+  "nombre": "Chanchito Feliz",
+  "raza": "Persa",
+  "edad": 5
+}
+
+# print(diccionario)
+# print(diccionario["nombre"])
+# print(diccionario["raza"])
+# print(diccionario.get("nombre"))
+
+diccionario["nombre"] = "Fluffy"
+print(diccionario)
+print(len(diccionario))
+
+
