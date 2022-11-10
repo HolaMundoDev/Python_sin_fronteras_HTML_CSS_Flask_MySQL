@@ -52,8 +52,11 @@ largoLista2 = len(lista2)
 
 # print(lista[2])
 
-lista.pop() # Elimina el ultimo elemento de la lista
+# lista.pop() # Elimina el ultimo elemento de la lista
 
-lista.remove("Hola") # Elimina el elemento que se le pase como parametro
+# lista.remove("Hola") # Elimina el elemento que se le pase como parametro
 
+lista.reverse() # Invierte la lista
+lista.sort() # Ordena la lista
 print(lista)
+
