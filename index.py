@@ -39,7 +39,7 @@ complejo = 1j # numeros complejos se les agrega una j
 
 lista = ["Hola","Mundo", "Chanchito feliz"]
 lista2 = lista.copy()
-lista.append(4)
+lista.append("Chanchito Triste")
 # lista.clear()
 
 # print(lista, lista2.count(1))
@@ -50,4 +50,10 @@ largoLista2 = len(lista2)
 
 # print(largoLista, largoLista2)
 
-print(lista[1])
+# print(lista[2])
+
+lista.pop() # Elimina el ultimo elemento de la lista
+
+lista.remove("Hola") # Elimina el elemento que se le pase como parametro
+
+print(lista)
