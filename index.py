@@ -21,7 +21,7 @@ a,b,c = "Lala", "Lele", "Lili"
 # print(a,b,c)
 
 valor1 = valor2 = valor3 = "Chanchito Feliz"
-print(valor1, valor2, valor3)
+# print(valor1, valor2, valor3)
 
 inicio = "Hola"
 final = "Mundo"
@@ -37,7 +37,7 @@ complejo = 1j # numeros complejos se les agrega una j
 
 # print(palabra, oracion, entero, conDecimales, complejo)
 
-lista = [1,2,3]
+lista = ["Hola","Mundo", "Chanchito feliz"]
 lista2 = lista.copy()
 lista.append(4)
 # lista.clear()
@@ -48,4 +48,6 @@ lista.append(4)
 largoLista = len(lista)
 largoLista2 = len(lista2)
 
-print(largoLista, largoLista2)
+# print(largoLista, largoLista2)
+
+print(lista[1])
