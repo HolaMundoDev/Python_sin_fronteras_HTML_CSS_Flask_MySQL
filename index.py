@@ -42,5 +42,10 @@ lista2 = lista.copy()
 lista.append(4)
 # lista.clear()
 
-print(lista)
-print(lista2)
+# print(lista, lista2.count(1))
+# print(len(lista), len(lista2))
+
+largoLista = len(lista)
+largoLista2 = len(lista2)
+
+print(largoLista, largoLista2)
