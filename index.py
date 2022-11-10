@@ -62,9 +62,9 @@ lista.sort() # Ordena la lista
 
 tupla = ("hola", "mundo", "somos", "tupla")
 
-print(tupla.count("hola"))
-print(tupla.index("mundo"))
-print(tupla[0])
+# print(tupla.count("hola"))
+# print(tupla.index("mundo"))
+# print(tupla[0])
 listaDeTupla = list(tupla)
 # print(listaDeTupla)
 
@@ -86,7 +86,7 @@ diccionario["nombre"] = "Fluffy"
 # print(len(diccionario))
 
 diccionario["ronronea"] = "Si"
-print(diccionario)
+# print(diccionario)
 # diccionario.pop("ronronea")
 # diccionario.popitem()
 
@@ -94,4 +94,25 @@ copiaGatito = diccionario.copy()
 otraCopiaGatito = dict(diccionario)
 # del diccionario["ronronea"]
 diccionario.clear()
-print(diccionario, copiaGatito, otraCopiaGatito)
+# print(diccionario, copiaGatito, otraCopiaGatito)
+
+fluffy = {
+  "nombre": "Fluffy",
+  "edad": 4
+}
+
+mamba = {
+  "nombre": "Mamba",
+  "edad": 12
+}
+
+gatitos = {
+  "fluyffy": fluffy,
+  "Mamba": mamba
+}
+
+print(gatitos)
+
+perritos = dict(nombre="Chanchito Feliz", edad=6)
+
+print(perritos)
