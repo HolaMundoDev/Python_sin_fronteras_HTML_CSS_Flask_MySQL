@@ -58,5 +58,12 @@ largoLista2 = len(lista2)
 
 lista.reverse() # Invierte la lista
 lista.sort() # Ordena la lista
-print(lista)
+# print(lista)
 
+tupla = ("hola", "mundo", "somos", "tupla")
+
+print(tupla.count("hola"))
+print(tupla.index("mundo"))
+print(tupla[0])
+listaDeTupla = list(tupla)
+print(listaDeTupla)
