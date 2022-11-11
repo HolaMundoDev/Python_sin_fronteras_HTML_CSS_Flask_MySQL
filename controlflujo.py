@@ -50,3 +50,10 @@ if 2 < 5: print("if de una linea")
 
 print("cuando devuelve true") if 5 > 2 else print("cuando devuelve false")
 
+if 2 < 5 and 5 > 2:
+    print("ambas condiciones son verdaderas")
+
+if 2 < 5 or 3 < 2:
+    print("una de las condiciones es verdadera")
+
+
