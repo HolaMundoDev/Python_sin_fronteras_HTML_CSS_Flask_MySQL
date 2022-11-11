@@ -46,5 +46,7 @@ if 2 > 5:
 else:
     print("yo solo me imprimo si lo anterior evalúa en falso")
 
+if 2 < 5: print("if de una linea")
 
+print("cuando devuelve true") if 5 > 2 else print("cuando devuelve false")
 
