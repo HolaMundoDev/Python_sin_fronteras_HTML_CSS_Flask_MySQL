@@ -106,3 +106,12 @@ form label {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
+.flash {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
