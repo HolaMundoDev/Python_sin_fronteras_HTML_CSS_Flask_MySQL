@@ -11,10 +11,14 @@ bp = Blueprint('mail', __name__, url_prefix='/')
 
 @bp.route("/", methods=('GET', 'POST'))
 def index():
+    search = request.args.get('search')
     db, c = get_db()
-    mails = c.execute('SELECT * FROM email')
+    if search is None:
+        mails = c.execute('SELECT * FROM email')
+    else:
+        mails = c.execute(
+            'SELECT * FROM email WHERE content LIKE %s', ('%'+search+'%',))
     mails = c.fetchall()
-
     return render_template('mail/index.html', mails=mails)
 
 
