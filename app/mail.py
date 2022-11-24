@@ -13,3 +13,6 @@ def index():
 
     return render_template('mail/index.html', mails=mails)
 
+@bp.route("/create", methods=('GET', 'POST'))
+def create():
+    return render_template('mail/create.html')

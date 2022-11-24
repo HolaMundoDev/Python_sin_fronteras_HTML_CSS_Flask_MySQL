@@ -6,7 +6,7 @@
 
 
 {% block action %}
-<a href="#" class="button">Nuevo Correo</a>
+<a href="{{ url_for('mail.create') }}" class="button">Nuevo Correo</a>
 {% endblock %}
 
 {% block content %}
