@@ -1,1 +1,1 @@
-web: flask init-db; gunicorn __init__.py:'create_app()'
+web: flask init-db; gunicorn app:'app'
