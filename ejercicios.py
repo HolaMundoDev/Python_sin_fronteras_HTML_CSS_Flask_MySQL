@@ -29,4 +29,14 @@ if segundo == "chanchito feliz":
     print("El valor ingresado no es un entero")
     exit()
 
-print(primero + segundo)
+simbolo = input("ingrese el operación: ")
+if simbolo == "+":
+    print(primero + segundo)
+elif simbolo == "-":
+    print(primero - segundo)
+elif simbolo == "*":
+    print(primero * segundo)
+elif simbolo == "/":
+    print(primero / segundo)
+else:
+    print("El símbolo ingresado no es válido")
