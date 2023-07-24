@@ -7,12 +7,16 @@
 # else:
 #     print("el dato no esta en la lista :(", dato)
 
-primero = input("ingrese primer número: ")
+primero = input("ingrese el primer dato: ")
 
 try:
     primero = int(primero)
 except:
     primero = "chanchito feliz"
+
+if primero == "chanchito feliz":
+    print("El valor ingresado no es un entero")
+    exit()
 
 segundo = input("ingrese el segundo dato: ")
 
@@ -21,7 +25,8 @@ try:
 except:
     segundo = "chanchito feliz"
 
-if primero == "chanchito feliz" or segundo == "chanchito feliz":
-    print("Ingresaste mal un dato, prueba de nuevo solo con números")
-else:
-    print(primero + segundo)
+if segundo == "chanchito feliz":
+    print("El valor ingresado no es un entero")
+    exit()
+
+print(primero + segundo)
