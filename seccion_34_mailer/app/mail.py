@@ -5,6 +5,9 @@ from flask import (
 )
 
 from app.db import get_db
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 bp = Blueprint('mail', __name__, url_prefix='/')
 
@@ -38,7 +41,12 @@ def create():
             errors.append("Content es obligatorio.")
 
         if len(errors) == 0:
-            send(email, subject, content)
+            try:
+                send(email, subject, content)
+            except Exception as e:
+                print(f"Error al enviar el correo: {e}")
+                flash("Error al enviar el correo")
+                return redirect(url_for('mail.index'))
             db, c = get_db()
             c.execute('INSERT INTO email (email, subject, content) VALUES (%s, %s, %s)',
                       (email, subject, content))
@@ -53,11 +61,28 @@ def create():
     return render_template('mail/create.html')
 
 
+# def send(to, subject, content):
+#     sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_KEY'])
+#     from_email = Email(current_app.config['FROM_EMAIL'])
+#     to_email = To(to)
+#     content = Content("text/plain", content)
+#     mail = Mail(from_email, to_email, subject, content)
+#     response = sg.client.mail.send.post(request_body=mail.get())
+#     print(response)
+
 def send(to, subject, content):
-    sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_KEY'])
-    from_email = Email(current_app.config['FROM_EMAIL'])
-    to_email = To(to)
-    content = Content("text/plain", content)
-    mail = Mail(from_email, to_email, subject, content)
-    response = sg.client.mail.send.post(request_body=mail.get())
-    print(response)
+    msg = MIMEMultipart()
+    msg['From'] = current_app.config['FROM_EMAIL']
+    msg['To'] = to
+    msg['Subject'] = subject
+
+    msg.attach(MIMEText(content, 'plain'))
+    
+    with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
+        smtp.ehlo()
+        smtp.starttls()
+
+        smtp.login(current_app.config["SMTP_USERNAME"], current_app.config["SMTP_PASSWORD"])
+        smtp.send_message(msg)
+        print("Mensaje enviado")
+
